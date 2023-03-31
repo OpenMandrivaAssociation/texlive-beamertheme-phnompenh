@@ -1,6 +1,6 @@
 Name:		texlive-beamertheme-phnompenh
 Version:	39100
-Release:	1
+Release:	2
 Summary:	A simple beamer theme
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/beamertheme-phnompenh
