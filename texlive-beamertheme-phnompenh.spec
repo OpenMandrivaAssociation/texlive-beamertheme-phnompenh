@@ -3,7 +3,7 @@ Version:	39100
 Release:	2
 Summary:	A simple beamer theme
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/beamertheme-phnompenh
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/beamertheme-phnompenh
 License:	gpl
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamertheme-phnompenh.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamertheme-phnompenh.doc.r%{version}.tar.xz
