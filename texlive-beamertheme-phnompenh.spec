@@ -1,36 +1,23 @@
-Name:		texlive-beamertheme-phnompenh
-Version:	39100
-Release:	2
+%global tl_name beamertheme-phnompenh
+%global tl_revision 39100
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.0
+Release:	%{tl_revision}.1
 Summary:	A simple beamer theme
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/beamertheme-phnompenh
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/beamer-contrib/themes/phnompenh
 License:	gpl
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamertheme-phnompenh.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamertheme-phnompenh.doc.r%{version}.tar.xz
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/beamertheme-phnompenh.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/beamertheme-phnompenh.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package provides a simple theme, similar to some others,
-but designed to be attractive.
+The package provides a simple theme, similar to some others, but
+designed to be attractive.
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%{_texmfdistdir}/tex/latex/beamertheme-phnompenh
-%doc %{_texmfdistdir}/doc/latex/beamertheme-phnompenh
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
